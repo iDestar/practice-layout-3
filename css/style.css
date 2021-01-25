@@ -1,129 +1,291 @@
-html {
-  box-sizing: border-box;
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+body {
+  line-height: 1;
 }
 
-.header__wrapper {
-  width: 944px;
-  margin: 0 auto;
+ol, ul {
+  list-style: none;
 }
 
-.header {
-  margin-top: 31px;
-  margin-bottom: 105px;
-}
-.header__nav {
-  border-bottom: 1px solid #828282;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  padding-bottom: 34px;
-  margin-bottom: 32px;
-}
-.nav__list {
-  display: flex;
-  justify-content: space-between;
+blockquote, q {
+  quotes: none;
 }
 
-.nav__list-link {
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
   text-decoration: none;
-  font-size: 18px;
-  line-height: 22px;
-  color: #828282;
 }
 
-.sub__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 37px;
+del {
+  text-decoration: line-through;
 }
 
-.sub__header-text {
-  margin-right: 55px;
-  padding-top: 46px;
-  width: 153px;
-  font-size: 18px;
-  line-height: 22px;
-  color: #070707;
-}
-
-.sub__header-title {
-  width: 123px;
-  font-size: 47px;
-  line-height: 59px;
-  color: #070707;
-}
-
-.sub__header-langtoggle {
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  height: 94px;
-  width: 18px;
-}
-
-.sub__header-langtoggle::before {
-  display: block;
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: url('/img/align-bottom.svg') no-repeat;
-  transform: rotate(270deg);
-  position: absolute;
-  left: 40px;
-  bottom: -17px;
-}
-
-.sub__header-langtoggle-ru {
-  cursor: pointer;
-  transform: rotate(270deg);
-  padding: 0;
-  font-size: 16px;
-  line-height: 20px;
-  background-color: transparent;
-  border: none;
-}
-
-.sub__header-langtoggle-eng {
-  cursor: pointer;
-  transform: rotate(270deg);
-  padding: 0;
-  font-size: 16px;
-  line-height: 20px;
-  background-color: transparent;
-  border: none;
-  margin-bottom: 12px;
-}
-
-.not_active {
-  color: #828282;
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .main__wrapper {
-  width: 1445px;
+  max-width: 1445px;
   margin: 0 auto;
 }
 
-.main__about {
-  height: 506px;
-  background: #f6f6f6;
+.header__wrapper {
+  max-width: 945px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header__wrapper .header {
+  margin-bottom: 105px;
 }
 
-.main__about-title {
-  font-size: 34px;
-  line-height: 42px;
-  text-align: center;
+.site__nav {
+  height: 87px;
+  border-bottom: 1px solid #828282;
 }
 
-.main__abount-desc {
+.site__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.site__nav-list-item {
   font-size: 18px;
   line-height: 22px;
+  padding-bottom: 10px;
+}
+.site__nav-list-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.header__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 180px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.header__block .header__block-name {
+  font-size: 48px;
+  line-height: 59px;
+}
+.header__block .header__block-desc {
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 50px;
+  padding-right: 69px;
+}
+.header__block .header__block-lang {
+  padding-top: 30px;
+}
+
+.header__img-wrapper .header__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about {
+  height: 506px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about .about__title {
+  font-size: 34px;
+  line-height: 42px;
+}
+.about .about__desc {
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 24px 0;
+}
+.about .about__desc:last-child {
+  padding-bottom: 0;
+}
+
+.skills {
+  max-width: 945px;
+  height: 610px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.skills .skills__title {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  font-size: 34px;
+  line-height: 42px;
+}
+.skills .skills_anno {
+  font-size: 22px;
+  line-height: 18px;
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+.skills .skill__block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 108px;
+}
+.skills .skill_card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   text-align: center;
 }
-.main__about-wrap {
-  vertical-align: middle;
+.skills .skill_card:first-child {
+  margin-left: 0;
+}
+.skills .skill_card:last-child {
+  margin-right: 0;
+}
+.skills .skill_card:last-child .skill__card_star-block {
+  padding-top: 50px;
+}
+.skills .skill_card .skill__card-desc {
+  padding-top: 25px;
+}
+.skills .skill_card .skill__card_star-block {
+  padding-top: 35px;
+}
+.skills .skill_card .skill__card_star-block .skill__card-star {
+  margin-right: 5px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 2250px;
+  background-color: #f6f6f6;
+}
+.portfolio .portfolio__title {
+  padding-top: 112px;
+  padding-bottom: 47px;
+  font-size: 34px;
+  line-height: 42px;
+}
+
+.portfolio__item .portfolio__item-img {
+  max-width: 100%;
+  height: auto;
+}
+.portfolio__item a {
+  color: black;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.portfolio__item .portfolio__item-decs {
+  padding-top: 38px;
+  padding-bottom: 99px;
+  text-align: center;
+}
+
+.footer {
+  height: 630px;
+}
+
+.footer__block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+}
+.footer__block h2 {
+  padding-top: 107px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 34px;
+  line-height: 42px;
+}
+.footer__block .footer__block-message {
+  font-size: 22px;
+  line-height: 22px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.footer__block .footer__block-second-message {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+
+.footer__block-btn {
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: white;
+  background-color: black;
+  outline: none;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.footer__block-social-links {
+  padding-top: 80px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-links-item {
+  width: 40px;
+  height: 40px;
+  background-image: url(/img/linkedin-social.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.social-links-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
