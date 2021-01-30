@@ -87,6 +87,10 @@ table {
   height: 100%;
 }
 
+.site__nav-lang {
+  display: none;
+}
+
 .site__nav-list-item {
   font-size: 18px;
   line-height: 22px;
@@ -95,6 +99,10 @@ table {
 .site__nav-list-item a {
   color: black;
   text-decoration: none;
+}
+
+.nav__list-close {
+  display: none;
 }
 
 .header__block {
@@ -301,6 +309,46 @@ table {
 @media screen and (max-width: 375px) {
   .site__nav {
     display: none;
+  }
+
+  .site__nav-acite {
+    display: block;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+  .site__nav-acite .site__nav-lang {
+    display: block;
+    position: absolute;
+    top: 610px;
+    left: 311px;
+  }
+  .site__nav-acite .nav__list-close {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+  .site__nav-acite .nav__list-close:first-child {
+    width: 10px;
+    height: 2px;
+    color: black;
+  }
+  .site__nav-acite .site__nav-list {
+    display: block;
+  }
+  .site__nav-acite .site__nav-list .site__nav-list-item {
+    padding-top: 40px;
+  }
+  .site__nav-acite .site__nav-list .site__nav-list-item a {
+    font-size: 34px;
+    line-height: 42px;
+    color: black;
   }
 
   .header__block-lang {
