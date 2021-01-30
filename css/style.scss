@@ -17,6 +17,10 @@ $main-lh: 22px;
   }
 }
 
+.header__burger {
+  display: none;
+}
+
 .site__nav {
   height: 87px;
   border-bottom: 1px solid #828282;
@@ -145,6 +149,10 @@ $main-lh: 22px;
   }
 }
 
+.skill__desc-wrapper {
+  text-align: center;
+}
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -241,5 +249,135 @@ $main-lh: 22px;
     display: block;
     width: 100%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .site__nav {
+    display: none;
+  }
+
+  .header__block-lang {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 20px;
+    top: 63px;
+    left: 300px;
+
+    span {
+      position: absolute;
+      background-color: black;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      top: 8px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      background-color: black;
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  .header__img-wrapper {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .header__block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 30px;
+    margin-left: 15px;
+
+    .header__block-desc {
+      padding: 0px;
+    }
+  }
+
+  .skills {
+    padding-top: 80px;
+    height: 1339px;
+    .skill__desc-wrapper {
+      padding-bottom: 80px;
+      .skills_anno {
+        padding: 0;
+        text-align: center;
+      }
+      .skills__title {
+        padding-top: 0;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+    }
+  }
+
+  .skills .skill__block {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 83px;
+    height: 970px;
+  }
+  .about {
+    justify-content: start;
+    padding-top: 50px;
+    height: 420px;
+    .about__desc {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .portfolio {
+    height: 1118px;
+    flex-wrap: nowrap;
+    .portfolio__title {
+      padding-top: 75px;
+      padding-bottom: 70px;
+    }
+    .portfolio__item {
+      padding-left: 30px;
+      padding-right: 30px;
+      .portfolio__item-decs {
+        padding-top: 20px;
+        padding-bottom: 91px;
+      }
+    }
+  }
+
+  .footer__block {
+    .footer__block-title {
+      padding-top: 80px;
+    }
+    .footer__block-btn {
+      padding: 10px 95px;
+    }
+    .footer__block-message {
+      padding-bottom: 40px;
+    }
+    .footer__block-social-links {
+      width: 318px;
+      padding-top: 50px;
+    }
   }
 }
