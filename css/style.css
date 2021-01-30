@@ -334,7 +334,12 @@ table {
     position: absolute;
     top: 0;
   }
-  .site__nav-acite .nav__list-close:first-child {
+  .site__nav-acite .nav__list-close .nav__list-close-first-line {
+    width: 10px;
+    height: 2px;
+    color: black;
+  }
+  .site__nav-acite .nav__list-close .nav__list-close-second-line {
     width: 10px;
     height: 2px;
     color: black;
