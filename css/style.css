@@ -308,10 +308,6 @@ table {
 
 @media screen and (max-width: 375px) {
   .site__nav {
-    display: none;
-  }
-
-  .site__nav-acite {
     display: block;
     z-index: 10;
     height: 100%;
@@ -322,38 +318,56 @@ table {
     left: 0;
     padding-left: 30px;
     padding-top: 20px;
+    transform: translateX(100%);
+    transition: all 0.2s linear;
   }
-  .site__nav-acite .site__nav-lang {
+  .site__nav .site__nav-lang {
     display: block;
     position: absolute;
     top: 610px;
     left: 311px;
   }
-  .site__nav-acite .nav__list-close {
+  .site__nav .nav__list-close {
+    z-index: 11;
     display: block;
     position: absolute;
-    top: 0;
+    width: 25px;
+    height: 25px;
+    top: 75px;
+    left: 320px;
   }
-  .site__nav-acite .nav__list-close .nav__list-close-first-line {
-    width: 10px;
-    height: 2px;
-    color: black;
+  .site__nav .nav__list-close .nav__list-close-first-line {
+    position: absolute;
+    top: 0px;
+    transform: rotate(45deg);
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #828282;
   }
-  .site__nav-acite .nav__list-close .nav__list-close-second-line {
-    width: 10px;
-    height: 2px;
-    color: black;
+  .site__nav .nav__list-close .nav__list-close-second-line {
+    position: absolute;
+    top: 0px;
+    transform: rotate(-45deg);
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #828282;
   }
-  .site__nav-acite .site__nav-list {
+  .site__nav .site__nav-list {
     display: block;
   }
-  .site__nav-acite .site__nav-list .site__nav-list-item {
+  .site__nav .site__nav-list .site__nav-list-item {
     padding-top: 40px;
   }
-  .site__nav-acite .site__nav-list .site__nav-list-item a {
+  .site__nav .site__nav-list .site__nav-list-item a {
     font-size: 34px;
     line-height: 42px;
     color: black;
+  }
+
+  .site__nav-acite {
+    transform: translateX(0);
   }
 
   .header__block-lang {
