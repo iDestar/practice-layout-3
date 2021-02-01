@@ -253,6 +253,16 @@ $main-lh: 22px;
   background-image: url(/img/linkedin-social.svg);
   background-repeat: no-repeat;
   background-position: center center;
+  &:nth-child(2) {
+    background-image: url(/img/insta-social.svg);
+  }
+  &:nth-child(3) {
+    background-image: url(/img/behance-social.svg);
+  }
+  &:nth-child(4) {
+    background-image: url(/img/drible-social.svg);
+  }
+
   a {
     display: block;
     width: 100%;
